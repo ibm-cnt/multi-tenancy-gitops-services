@@ -36,7 +36,7 @@ ibm-sfg-prod:
     fsGroup: 1010
     runAsUser: 1010
   dataSetup:
-    enabled: false
+    enabled: true
     upgrade: false
   env:
     tz: "UTC"
@@ -44,7 +44,7 @@ ibm-sfg-prod:
     upgradeCompatibilityVerified: true
   logs:
     # true if user wish to redirect the application logs to console else false. If provided value is true , then application logs will reside inside containers. No volume mapping will be used.
-    enableAppLogOnConsole: false
+    enableAppLogOnConsole: true
     #setup.cfg configuration starts here. Property names must follow camelCase format.
   setupCfg:
     #Upgrade
