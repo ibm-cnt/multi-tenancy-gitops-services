@@ -48,7 +48,7 @@ ibm-sfg-prod:
     #setup.cfg configuration starts here. Property names must follow camelCase format.
   setupCfg:
     #Upgrade
-    #upgrade: false
+    upgrade: false
     basePort: 50000
     #License - specify values as true/false
     licenseAcceptEnableSfg: true
