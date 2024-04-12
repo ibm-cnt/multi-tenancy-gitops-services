@@ -68,7 +68,7 @@ ibm-sfg-prod:
     # Name of DB secret
     dbSecret: b2b-db-secret
     #Provide the admin email address
-    adminEmailAddress: freitasb@br.ibm.com
+    adminEmailAddress: connor.mcgoey@ibm.com
     # Provide the SMTP host details
     smtpHost: localhost
     #WMQ
