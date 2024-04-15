@@ -37,7 +37,7 @@ ibm-sfg-prod:
     runAsUser: 1010
   dataSetup:
     enabled: true
-    upgrade: false
+    upgrade: true
   env:
     tz: "UTC"
     license: "accept"
@@ -60,11 +60,11 @@ ibm-sfg-prod:
     nistComplianceMode: "off"
     # Provide the DB attributes
     dbVendor: db2
-    dbHost: 172.21.78.149
+    dbHost: 172.21.186.148
     dbPort: 50000
     dbData: B2BIDB
     dbDrivers: db2jcc4.jar
-    dbCreateSchema: false
+    dbCreateSchema: true
     # Name of DB secret
     dbSecret: b2b-db-secret
     #Provide the admin email address
