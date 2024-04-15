@@ -37,18 +37,18 @@ ibm-sfg-prod:
     runAsUser: 1010
   dataSetup:
     enabled: true
-    upgrade: true
+    upgrade: false
   env:
     tz: "UTC"
     license: "accept"
-    upgradeCompatibilityVerified: true
+    upgradeCompatibilityVerified: false
   logs:
     # true if user wish to redirect the application logs to console else false. If provided value is true , then application logs will reside inside containers. No volume mapping will be used.
     enableAppLogOnConsole: true
     #setup.cfg configuration starts here. Property names must follow camelCase format.
   setupCfg:
     #Upgrade
-    upgrade: true
+    upgrade: false
     basePort: 50000
     #License - specify values as true/false
     licenseAcceptEnableSfg: true
@@ -62,7 +62,7 @@ ibm-sfg-prod:
     dbVendor: db2
     dbHost: 172.21.186.148
     dbPort: 50000
-    dbData: B2BIDB
+    dbData: B2BI
     dbDrivers: db2jcc4.jar
     dbCreateSchema: true
     # Name of DB secret
