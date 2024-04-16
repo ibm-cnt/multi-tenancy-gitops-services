@@ -98,8 +98,8 @@ ibm-sfg-prod:
         cpu: 4000m
         memory: 8Gi
       requests:
-        cpu: 2000m
-        memory: 4Gi
+        cpu: 1000m
+        memory: 2Gi
 
     autoscaling:
       enabled: false
@@ -173,8 +173,8 @@ ibm-sfg-prod:
         cpu: 4000m
         memory: 8Gi
       requests:
-        cpu: 2000m
-        memory: 4Gi
+        cpu: 1000m
+        memory: 2Gi
 
     autoscaling:
       enabled: false
