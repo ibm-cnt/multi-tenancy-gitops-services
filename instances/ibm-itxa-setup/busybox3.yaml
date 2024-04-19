@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: busybox-deployment
+  labels:
+    app: busybox
+spec:
+  selector:
+    matchLabels:
+      app: busybox
+  template:
+    metadata:
+      labels:
+        app: busybox
+    spec:
+      securityContext:
+        runAsUser: 1001
+        fsGroup: 2000
+    #    runAsNonRoot: false
+      containers:
+      - name: busybox
+        image: image-registry.openshift-image-registry.svc:5000/b2bi-prod/busybox@sha256:158a7e0190cf8f53560eb40bc8c125df8fc460da44df25d52114ea4d308e7b8b
+        args: 
+        -  sleep
+        -  "3600"
+        volumeMounts:
+        - mountPath: /vtest
+          name: volume
+      volumes:
+      - name: volume
+        persistentVolumeClaim:
+          claimName: itxa-nfs-claim
+
+
+  
+

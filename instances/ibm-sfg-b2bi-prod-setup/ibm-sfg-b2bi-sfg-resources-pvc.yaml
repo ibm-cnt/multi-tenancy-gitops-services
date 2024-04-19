@@ -16,6 +16,6 @@ spec:
     - ReadWriteMany
   resources:
     requests:
-      storage: 20Gi
+      storage: 100Mi
   storageClassName: managed-nfs-storage
   volumeMode: Filesystem
